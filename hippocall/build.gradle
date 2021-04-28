@@ -19,7 +19,7 @@ android {
         all*.exclude module: 'servlet-api'
     }
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -60,7 +60,7 @@ dependencies {
     implementation 'org.jetbrains.kotlin:kotlin-reflect:1.4.20'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'de.hdodenhof:circleimageview:2.2.0'
-//    api('org.jitsi.react:jitsi-meet-sdk:+') { transitive = true }
+    api('org.jitsi.react:jitsi-meet-sdk:+') { transitive = true }
     implementation 'com.skyfishjy.ripplebackground:library:1.0.1'
 }
 

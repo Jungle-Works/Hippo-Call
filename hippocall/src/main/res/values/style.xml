@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="timer_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/fugu_white</item>
+        <item name="android:padding">@dimen/fugu_padding_4</item>
+        <item name="android:textSize">@dimen/fugu_text_size_normal</item>
+        <item name="android:layout_marginRight">@dimen/fugu_margin_10</item>
+    </style>
+
+</resources>

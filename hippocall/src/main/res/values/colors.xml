@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2496ff</color>
+    <color name="rippelColor">#0099CC</color>
+    <color name="hippo_black_opaque">#343434</color>
+    <color name="gray_dark_overlay">#99000000</color>
+
+
+    <color name="black_opaque">#CC000000</color>
+    <color name="black_opaque_50">#80000000</color>
+    <color name="teal">#009688</color>
+</resources>

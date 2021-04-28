@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/hippo_white"
+        tools:context=".confcall.JitsiCallActivity">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="@color/hippo_white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCallType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/fugu_margin_10"
+                android:padding="@dimen/fugu_margin_10"
+                tools:text="Fugu Video Call"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:textColor="@color/hippo_black"
+                android:textSize="18sp" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCalledPersonName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/fugu_margin_10"
+                tools:text="Rajat Dhamija"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:textColor="@color/hippo_black"
+                android:textSize="22sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivCalledPersonImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_hippo_user_image" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCallStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/fugu_margin_10"
+                android:text="Calling..."
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:textColor="@color/hippo_black"
+                android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivHangUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/fugu_margin_20"
+            android:layout_alignParentBottom="true"
+            android:background="@color/hippo_transparent"
+            android:paddingTop="@dimen/fugu_padding_10"
+            android:paddingBottom="@dimen/fugu_padding_10"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_call_hungup" />
+
+</RelativeLayout>

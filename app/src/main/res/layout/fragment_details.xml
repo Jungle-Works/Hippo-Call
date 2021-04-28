@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/email_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fugu_margin_6"
+            app:cardElevation="@dimen/fugu_elevation_4"
+            app:cardBackgroundColor="@color/fugu_white">
+
+        <TextView
+                android:id="@+id/txtemail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email: "
+                android:padding="@dimen/fugu_padding_10"
+        />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/secret_key_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fugu_margin_6"
+            app:cardElevation="@dimen/fugu_elevation_4"
+            app:cardBackgroundColor="@color/fugu_white">
+
+        <TextView
+                android:id="@+id/secret_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="App Secret Key: "
+                android:padding="@dimen/fugu_padding_10"
+        />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/unique_key_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fugu_margin_6"
+            app:cardElevation="@dimen/fugu_elevation_4"
+            app:cardBackgroundColor="@color/fugu_white">
+
+        <TextView
+                android:id="@+id/unique_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unique Key: "
+                android:padding="@dimen/fugu_padding_10"
+        />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fugu_margin_6"
+            app:cardElevation="@dimen/fugu_elevation_4"
+            app:cardBackgroundColor="@color/fugu_white">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:padding="@dimen/fugu_padding_10"
+        />
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

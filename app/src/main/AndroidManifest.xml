@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="hipposdk.com.hipposdk">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />-->
+
+    <application
+            android:name=".MyApplication"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_send_normal"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+
+        <activity android:name=".MainActivity"/>
+
+        <activity
+                android:name=".PiPActivity"
+                android:label="Title"
+                android:launchMode="singleTask"
+                android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+                android:resizeableActivity="true"
+                android:supportsPictureInPicture="true"
+                android:theme="@style/AppTheme" />
+
+        <activity android:name=".InitActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".DemoPushActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http"
+                      android:host="www.app.com"
+                      android:pathPrefix="/settings" />
+                <data android:scheme="app"
+                      android:host="settings" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".PushActivity"/>
+        <activity android:name=".HomeFragmentActivity" />
+
+        <!--<provider
+                android:name="android.support.v4.content.FileProvider"
+                android:authorities="${applicationId}.provider"
+                android:exported="false"
+                android:grantUriPermissions="true"
+                android:permission="android.permission.MANAGE_DOCUMENTS">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/provider_paths" />
+        </provider>-->
+
+        <!--<provider-->
+                <!--android:name="com.hippo.utils.filepicker.LocalStorageProvider"-->
+                <!--android:authorities="${applicationId}.provider"-->
+                <!--android:enabled="false"-->
+                <!--android:exported="true"-->
+                <!--android:grantUriPermissions="true"-->
+                <!--android:permission="android.permission.MANAGE_DOCUMENTS" >-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.content.action.DOCUMENTS_PROVIDER" />-->
+            <!--</intent-filter>-->
+            <!--<meta-data-->
+                    <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+                    <!--android:resource="@xml/provider_paths" />-->
+        <!--</provider>-->
+
+        <provider
+                android:name="androidx.core.content.FileProvider"
+                android:authorities="${applicationId}.provider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/provider_paths" />
+        </provider>
+
+
+        <service android:name=".java.MyFirebaseMessagingService"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <meta-data
+                android:name="io.fabric.ApiKey"
+                android:value="fd4142536bec2f862d605021f1c123340a5d18ad" />
+        <service android:name=".RecordingService" />
+
+    </application>
+
+</manifest>

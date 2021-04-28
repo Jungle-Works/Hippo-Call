@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/show_conversation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="@dimen/fugu_margin_10"
+            app:cardElevation="@dimen/fugu_elevation_4"
+            app:cardBackgroundColor="@color/fugu_white">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Conversation"
+                android:padding="@dimen/fugu_padding_10"
+        />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_bot_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:hint="Bot Group ID"
+            android:layout_margin="@dimen/fugu_margin_10"
+            android:textSize="16sp"
+            android:maxLines="1"
+            android:elevation="@dimen/fugu_elevation_4"
+            android:background="@color/fugu_white"
+            android:paddingStart="@dimen/fugu_padding_8"
+            app:layout_constraintTop_toBottomOf="@+id/show_conversation"
+            android:padding="@dimen/fugu_margin_8"/>
+
+
+    <Button
+            android:id="@+id/setId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/et_bot_id"
+            android:text="Set"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="@dimen/fugu_margin_10"
+            android:elevation="@dimen/fugu_elevation_4"
+            android:background="@drawable/hippo_button_theme_selector"
+            android:textColor="@color/fugu_white"
+            android:layout_marginTop="@dimen/fugu_margin_10"
+
+    />
+
+    <TextView
+            android:id="@+id/unreadCountTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:padding="@dimen/fugu_padding_10"
+            android:layout_marginStart="20dp"
+            android:textSize="22sp"
+            app:layout_constraintTop_toBottomOf="@+id/setId"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="20dp" />
+
+
+    <Button
+            android:id="@+id/payBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/unreadCountTxt"
+            android:text="Unread Count"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginEnd="@dimen/fugu_margin_10"
+            android:elevation="@dimen/fugu_elevation_4"
+            android:background="@drawable/hippo_button_theme_selector"
+            android:textColor="@color/fugu_white"
+            android:layout_marginTop="@dimen/fugu_margin_10"
+            />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

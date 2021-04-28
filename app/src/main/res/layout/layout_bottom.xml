@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="#FFF"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+            android:tag="start_layout"
+            android:id="@+id/start_translation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <SeekBar
+                android:id="@+id/seekBar_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="0dp"
+                android:progress="7"
+                android:tag="start"
+                android:splitTrack="false"
+                android:thumb="@drawable/ic_group_2"/>
+
+        <TextView
+                android:id="@+id/tvStartTranslation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="Start Translation"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:tag="stop_layout"
+            android:id="@+id/stop_translation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+    >
+
+        <SeekBar
+                android:id="@+id/seekBar_stop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="0dp"
+                android:progress="7"
+                android:tag="stop"
+                android:splitTrack="false"
+                android:thumb="@drawable/ic_slider_red"/>
+
+        <TextView
+                android:id="@+id/tvStopTranslation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="#000000"
+                android:layout_centerHorizontal="true"
+                android:text="Stop Translation"/>
+
+
+        <TextView
+                android:id="@+id/timer"
+                android:tag="tvTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:textColor="#F00"
+                android:drawablePadding="5dp"
+                android:textSize="14sp"
+                android:drawableStart="@drawable/ic_timer"
+                android:layout_centerHorizontal="true"
+                android:text="00:00"/>
+
+
+    </RelativeLayout>
+
+    <Button
+            android:id="@+id/click"
+            android:text="Click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+</LinearLayout>

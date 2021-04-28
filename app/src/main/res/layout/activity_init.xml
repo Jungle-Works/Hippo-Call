@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/fugu_margin_10"
+        android:drawablePadding="@dimen/fugu_padding_10"
+        android:text="Manager SDK" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switch1"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="@dimen/fugu_margin_6"
+        android:layout_marginRight="50dp"
+        app:cardBackgroundColor="@color/fugu_white"
+        app:cardElevation="@dimen/fugu_elevation_4">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/fugu_padding_10"
+                android:text="Enable payment" />
+
+            <Switch
+                android:id="@+id/payment_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/fugu_margin_20" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ImageTypes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/payment"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="@dimen/fugu_margin_6"
+        android:layout_marginRight="50dp"
+        app:cardBackgroundColor="@color/fugu_white"
+        app:cardElevation="@dimen/fugu_elevation_4">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/fugu_padding_10"
+                android:text="Enable All type of files" />
+
+            <Switch
+                android:id="@+id/fileSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/fugu_margin_20" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ImageTypes"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/fugu_padding_20"
+
+        android:layout_marginTop="@dimen/fugu_margin_10"
+        android:layout_marginRight="@dimen/fugu_padding_20"
+        android:minWidth="120dp"
+        android:minHeight="30dp"
+        android:prompt="@string/spinner_title" />
+
+
+    <Button
+        android:id="@+id/init"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/fugu_margin_10"
+        android:text="Init" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/init"
+        android:layout_below="@+id/spinner"
+        android:paddingLeft="@dimen/fugu_padding_10"
+        android:paddingRight="@dimen/fugu_padding_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_manager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fugu_margin_10"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/fugu_padding_20"
+                android:paddingRight="@dimen/fugu_padding_20"
+                android:visibility="gone">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fugu_margin_6"
+                    app:cardBackgroundColor="@color/fugu_white"
+                    app:cardElevation="@dimen/fugu_elevation_4"
+                    app:layout_constraintTop_toBottomOf="@+id/payment">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/fugu_padding_10"
+                            android:text="Enable broadcast" />
+
+                        <Switch
+                            android:id="@+id/broadcast_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/fugu_margin_20" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fugu_margin_6"
+                    app:cardBackgroundColor="@color/fugu_white"
+                    app:cardElevation="@dimen/fugu_elevation_4"
+                    app:layout_constraintTop_toBottomOf="@+id/payment">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/fugu_padding_10"
+                            android:text="IsTookan Login" />
+
+                        <Switch
+                            android:id="@+id/tooken_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/fugu_margin_20" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <EditText
+                    android:id="@+id/et_manager_app_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="App type(Default 1)"
+                    android:inputType="number"
+                    android:maxLines="1" />
+
+                <EditText
+                    android:id="@+id/et_manager_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/et_manager_token"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Auth token(optional)"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="1d2d6ef9b0d8589fd1cb72b0c776472a" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_sdk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/announcement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="@dimen/fugu_margin_6"
+                    android:layout_marginRight="50dp"
+                    app:cardBackgroundColor="@color/fugu_white"
+                    app:cardElevation="@dimen/fugu_elevation_4">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/fugu_padding_10"
+                            android:text="Enable announcement" />
+
+                        <Switch
+                            android:id="@+id/announcement_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/fugu_margin_20" />
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <EditText
+                    android:id="@+id/et_app_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="App type(Default 1)"
+                    android:inputType="number"
+                    android:maxLines="1" />
+
+                <EditText
+                    android:id="@+id/et_app_secret_key"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="f58fe228d784dab9157873cd1fd44aa7"
+                    android:maxLines="1" />
+
+                <EditText
+                    android:id="@+id/et_user_unique_key"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="User unique key (qwerty)"
+                    android:maxLines="1" />
+
+
+                <EditText
+                    android:id="@+id/et_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="User name(optional)"
+                    android:maxLines="1" />
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="User email(optional)"
+                    android:maxLines="1" />
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="User Phome number(optional)"
+                    android:maxLines="1" />
+
+                <EditText
+                    android:id="@+id/et_lang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Lang"
+                    android:maxLines="1" />
+
+                <EditText
+                    android:id="@+id/et_tags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tags(, sprated)"
+                    android:maxLines="1" />
+
+                <EditText
+                    android:id="@+id/et_image_path"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Image Path(optional)"
+                    android:maxLines="1" />
+
+                <EditText
+                    android:id="@+id/et_bot_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Bot GroupID"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

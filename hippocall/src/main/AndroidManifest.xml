@@ -1,0 +1,67 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.hippocall">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <application
+            android:allowBackup="true"
+            android:supportsRtl="true">
+
+        <activity
+                android:name=".FuguCallActivity"
+                android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+                android:launchMode="singleTop"
+                android:screenOrientation="portrait"
+                android:resizeableActivity="true"
+                android:showOnLockScreen="true"
+                android:supportsPictureInPicture="true"
+                android:theme="@style/FuguTheme" />
+
+        <!--<activity
+                android:name=".FuguCallActivity"
+                android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+                android:launchMode="singleTop"
+                android:resizeableActivity="true"
+                android:screenOrientation="portrait"
+                android:supportsPictureInPicture="true"
+                android:taskAffinity=".FuguCallActivity"
+                android:theme="@style/FuguTheme"
+                tools:ignore="UnusedAttribute" />-->
+
+        <service android:name=".VideoCallService" />
+
+        // for conference
+        <activity
+                android:name=".confcall.CallFeedbackActivity"
+                android:launchMode="singleInstance"
+                android:theme="@style/TransparentPopup" />
+
+        <activity
+                android:name=".MainCallingActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/FuguTheme" />
+
+        <service
+                android:name=".confcall.OngoingCallService"
+                android:enabled="true"
+                android:exported="false" />
+
+        <receiver android:name=".confcall.HungUpBroadcast" />
+        <!--<receiver android:name=".confcall.RejoinBroadcast" />-->
+
+
+        <service
+                android:name="com.hippocall.confcall.CallingPushService"
+                android:exported="false"/>
+
+
+
+    </application>
+
+</manifest>

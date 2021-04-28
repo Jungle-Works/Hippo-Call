@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Hippo Call</string>
+    <string name="hippo_video_call">Video call</string>
+    <string name="hippo_stop_translation">Stop Translation</string>
+    <string name="hippo_start_translation">Start Translation</string>
+    <string name="facing_connectivity_issues">Facing Connectivity Issues \n\n Reconnecting...</string>
+    <string name="already_call_going">Already in call</string>
+
+    <string name="fugu_connecting">Connecting...</string>
+    <string name="hippo_call_calling">CALLING...</string>
+    <string name="hippo_call_ringing">RINGING...</string>
+    <string name="hippo_disconnect">DISCONNECTING...</string>
+    <string name="hippo_busy_on_call">Busy on another call...</string>
+    <string name="hippo_call_declined">Call Declined</string>
+    <string name="hippo_audio_call">Audio Call</string>
+    <string name="hippo_call_rejected">Call Rejected</string>
+    <string name="hippo_calling_from_old">does not have the updated app, Calling using old SDK...</string>
+    <string name="hippo_call_hungup">HANG UP</string>
+    <string name="hippo_call_outgoing">Ongoing Call</string>
+    <string name="hippo_call_incoming">Incoming Call</string>
+    <string name="hippo_call_incoming_video_call">Incoming Video Call</string>
+    <string name="hippo_call_incoming_audio_call">Incoming Audio Call</string>
+    <string name="hippo_call_connecting">Call connecting...</string>
+    <string name="hippo_calling_connection">Connecting you to your meeting</string>
+    <string name="hippo_answer">Answer</string>
+    <string name="hippo_reject">Decline</string>
+    <string name="hippo_swipe_reject">Swipe up to reject</string>
+    <string name="hippo_swipe_accept">Swipe up to accept</string>
+
+
+</resources>

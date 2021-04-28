@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_opaque"
+        tools:context="com.hippocall.MainCallingActivity">
+
+    <RelativeLayout
+            android:id="@+id/incomingCallLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fugu_padding_35"
+            android:visibility="visible">
+
+        <LinearLayout
+                android:id="@+id/llVideoCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="70dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+            <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:visibility="gone"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCallType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/fugu_margin_10"
+                    android:padding="@dimen/fugu_margin_10"
+                    android:text="HIPPO CALL"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                    android:textColor="@color/hippo_white"
+                    android:textSize="18sp" />
+        </LinearLayout>
+
+        <com.skyfishjy.library.RippleBackground xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/incomingRippleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/llIncomingCallActions"
+                android:visibility="visible"
+                app:rb_color="@color/colorPrimary"
+                app:rb_duration="3500"
+                app:rb_radius="32dp"
+                app:rb_rippleAmount="6"
+                app:rb_scale="4">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivIncomingPersonImage"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:layout_marginTop="100dp"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ic_hippo_team" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="70dp"
+                        android:gravity="center"
+                        android:text="Conference Call"
+                        android:textAppearance="@style/CustomTextAppearance.Semibold"
+                        android:textColor="@color/hippo_white"
+                        android:textSize="26sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvIncomingPersonName"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Conference Call"
+                        android:textAppearance="@style/CustomTextAppearance.Semibold"
+                        android:textColor="@color/hippo_white"
+                        android:textSize="16sp" />
+            </LinearLayout>
+        </com.skyfishjy.library.RippleBackground>
+
+
+        <LinearLayout
+                android:id="@+id/llIncomingCallActions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivRejectCall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.33"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/hippo_ic_hung_up_call" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.33" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivAnswerCall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.33"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/ic_call_answer" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+
+        <!--<?xml version="1.0" encoding="utf-8"?>-->
+        <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--        xmlns:tools="http://schemas.android.com/tools"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="match_parent"-->
+        <!--        tools:context=".MainCallingActivity">-->
+
+        <!--    <RelativeLayout-->
+        <!--            android:id="@+id/incomingCallLayout"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:visibility="visible">-->
+
+        <!--        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:orientation="vertical">-->
+
+        <!--            <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:animateLayoutChanges="true"-->
+        <!--                    android:background="@color/fugu_white"-->
+        <!--                    android:gravity="center"-->
+        <!--                    android:orientation="vertical">-->
+
+        <!--                <androidx.appcompat.widget.AppCompatTextView-->
+        <!--                        android:id="@+id/tvCallType"-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:drawablePadding="@dimen/fugu_margin_10"-->
+        <!--                        android:padding="@dimen/fugu_margin_10"-->
+        <!--                        android:text="HIPPO CALL"-->
+        <!--                        android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"-->
+        <!--                        android:textColor="@color/hippo_black"-->
+        <!--                        android:textSize="18sp" />-->
+
+
+        <!--                <de.hdodenhof.circleimageview.CircleImageView-->
+        <!--                        android:id="@+id/ivIncomingPersonImage"-->
+        <!--                        android:layout_width="80dp"-->
+        <!--                        android:layout_height="80dp" />-->
+
+        <!--                <androidx.appcompat.widget.AppCompatTextView-->
+        <!--                        android:id="@+id/tvIncomingPersonName"-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:padding="@dimen/fugu_margin_10"-->
+        <!--                        android:textColor="@color/hippo_black"-->
+        <!--                        android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"-->
+        <!--                        android:textSize="22sp" />-->
+
+        <!--                <androidx.appcompat.widget.AppCompatTextView-->
+        <!--                        android:id="@+id/tvCallStatus"-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:padding="@dimen/fugu_margin_10"-->
+        <!--                        android:text="INCOMING"-->
+        <!--                        android:visibility="gone"-->
+        <!--                        android:textColor="@color/hippo_black"-->
+        <!--                        android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"-->
+        <!--                        android:textSize="16sp" />-->
+
+        <!--            </LinearLayout>-->
+
+        <!--            <RelativeLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="match_parent">-->
+
+        <!--                <androidx.appcompat.widget.AppCompatImageView-->
+        <!--                        android:id="@+id/ivIncomingPersonImageBig"-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="match_parent"-->
+        <!--                        android:alpha="0.9"-->
+        <!--                        android:scaleType="centerCrop" />-->
+
+        <!--                <View-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="match_parent"-->
+        <!--                        android:background="@color/gray_dark_overlay" />-->
+
+        <!--                <RelativeLayout-->
+        <!--                        android:id="@+id/rlCallingButtons"-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_alignParentBottom="true"-->
+        <!--                        android:layout_marginStart="@dimen/fugu_margin_35"-->
+        <!--                        android:layout_marginEnd="@dimen/fugu_margin_35"-->
+        <!--                        android:layout_marginBottom="50dp"-->
+        <!--                        android:orientation="horizontal">-->
+
+        <!--                    <LinearLayout-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:layout_alignParentStart="true"-->
+        <!--                            android:layout_marginStart="0dp"-->
+        <!--                            android:orientation="vertical">-->
+
+        <!--                        <LinearLayout-->
+        <!--                                android:id="@+id/llReject"-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:orientation="vertical"-->
+        <!--                                android:visibility="invisible">-->
+
+        <!--                            <androidx.appcompat.widget.AppCompatImageView-->
+        <!--                                    android:id="@+id/reject_call_arrow_up_one"-->
+        <!--                                    android:layout_width="wrap_content"-->
+        <!--                                    android:layout_height="wrap_content"-->
+        <!--                                    android:layout_marginLeft="@dimen/fugu_margin_12"-->
+        <!--                                    android:layout_marginBottom="-5dp"-->
+        <!--                                    android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />-->
+
+        <!--                            <androidx.appcompat.widget.AppCompatImageView-->
+        <!--                                    android:id="@+id/reject_call_arrow_up_two"-->
+        <!--                                    android:layout_width="wrap_content"-->
+        <!--                                    android:layout_height="wrap_content"-->
+        <!--                                    android:layout_marginLeft="@dimen/fugu_margin_12"-->
+        <!--                                    android:layout_marginBottom="-5dp"-->
+        <!--                                    android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />-->
+
+        <!--                            <androidx.appcompat.widget.AppCompatImageView-->
+        <!--                                    android:id="@+id/reject_call_arrow_up_three"-->
+        <!--                                    android:layout_width="wrap_content"-->
+        <!--                                    android:layout_height="wrap_content"-->
+        <!--                                    android:layout_marginLeft="@dimen/fugu_margin_12"-->
+        <!--                                    android:layout_marginBottom="-5dp"-->
+        <!--                                    android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />-->
+
+        <!--                            <androidx.appcompat.widget.AppCompatImageView-->
+        <!--                                    android:id="@+id/reject_call_arrow_up_four"-->
+        <!--                                    android:layout_width="wrap_content"-->
+        <!--                                    android:layout_height="wrap_content"-->
+        <!--                                    android:layout_marginLeft="@dimen/fugu_margin_12"-->
+        <!--                                    android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />-->
+        <!--                        </LinearLayout>-->
+
+        <!--                        <androidx.appcompat.widget.AppCompatImageView-->
+        <!--                                android:id="@+id/ivRejectCall"-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:src="@drawable/hungup_icon" />-->
+
+        <!--                    </LinearLayout>-->
+
+        <!--                    <LinearLayout-->
+        <!--                            android:id="@+id/answerRoot"-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:layout_alignParentEnd="true"-->
+        <!--                            android:orientation="vertical">-->
+
+        <!--                        <LinearLayout-->
+        <!--                                android:id="@+id/llAnswer"-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:orientation="vertical"-->
+        <!--                                android:visibility="visible">-->
+
+        <!--                            <androidx.appcompat.widget.AppCompatImageView-->
+        <!--                                    android:id="@+id/pick_call_arrow_up_one"-->
+        <!--                                    android:layout_width="wrap_content"-->
+        <!--                                    android:layout_height="wrap_content"-->
+        <!--                                    android:layout_marginLeft="@dimen/fugu_margin_15"-->
+        <!--                                    android:layout_marginBottom="-5dp"-->
+        <!--                                    android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />-->
+
+        <!--                            <androidx.appcompat.widget.AppCompatImageView-->
+        <!--                                    android:id="@+id/pick_call_arrow_up_two"-->
+        <!--                                    android:layout_width="wrap_content"-->
+        <!--                                    android:layout_height="wrap_content"-->
+        <!--                                    android:layout_marginLeft="@dimen/fugu_margin_15"-->
+        <!--                                    android:layout_marginBottom="-5dp"-->
+        <!--                                    android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />-->
+
+        <!--                            <androidx.appcompat.widget.AppCompatImageView-->
+        <!--                                    android:id="@+id/pick_call_arrow_up_three"-->
+        <!--                                    android:layout_width="wrap_content"-->
+        <!--                                    android:layout_height="wrap_content"-->
+        <!--                                    android:layout_marginLeft="@dimen/fugu_margin_15"-->
+        <!--                                    android:layout_marginBottom="-5dp"-->
+        <!--                                    android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />-->
+
+        <!--                            <androidx.appcompat.widget.AppCompatImageView-->
+        <!--                                    android:id="@+id/pick_call_arrow_up_four"-->
+        <!--                                    android:layout_width="wrap_content"-->
+        <!--                                    android:layout_height="wrap_content"-->
+        <!--                                    android:layout_marginLeft="@dimen/fugu_margin_15"-->
+        <!--                                    android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />-->
+        <!--                        </LinearLayout>-->
+
+        <!--                        <androidx.appcompat.widget.AppCompatImageView-->
+        <!--                                android:id="@+id/ivAnswerCall"-->
+        <!--                                android:layout_width="65dp"-->
+        <!--                                android:layout_height="65dp"-->
+        <!--                                android:paddingLeft="@dimen/fugu_margin_5"-->
+        <!--                                android:paddingRight="@dimen/fugu_margin_5"-->
+        <!--                                android:src="@drawable/ic_call_answer" />-->
+
+        <!--                    </LinearLayout>-->
+
+        <!--                    <LinearLayout-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:layout_alignParentEnd="true"-->
+        <!--                            android:visibility="gone"-->
+        <!--                            android:orientation="vertical">-->
+
+        <!--                        <LinearLayout-->
+        <!--                                android:id="@+id/llReply"-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:orientation="vertical"-->
+        <!--                                android:visibility="invisible">-->
+
+        <!--                            <androidx.appcompat.widget.AppCompatImageView-->
+        <!--                                    android:id="@+id/reply_call_arrow_up_one"-->
+        <!--                                    android:layout_width="wrap_content"-->
+        <!--                                    android:layout_height="wrap_content"-->
+        <!--                                    android:layout_marginLeft="@dimen/fugu_margin_12"-->
+        <!--                                    android:layout_marginBottom="-5dp"-->
+        <!--                                    android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />-->
+
+        <!--                            <androidx.appcompat.widget.AppCompatImageView-->
+        <!--                                    android:id="@+id/reply_call_arrow_up_two"-->
+        <!--                                    android:layout_width="wrap_content"-->
+        <!--                                    android:layout_height="wrap_content"-->
+        <!--                                    android:layout_marginLeft="@dimen/fugu_margin_12"-->
+        <!--                                    android:layout_marginBottom="-5dp"-->
+        <!--                                    android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />-->
+
+        <!--                            <androidx.appcompat.widget.AppCompatImageView-->
+        <!--                                    android:id="@+id/reply_call_arrow_up_three"-->
+        <!--                                    android:layout_width="wrap_content"-->
+        <!--                                    android:layout_height="wrap_content"-->
+        <!--                                    android:layout_marginLeft="@dimen/fugu_margin_12"-->
+        <!--                                    android:layout_marginBottom="-5dp"-->
+        <!--                                    android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />-->
+
+        <!--                            <androidx.appcompat.widget.AppCompatImageView-->
+        <!--                                    android:id="@+id/reply_call_arrow_up_four"-->
+        <!--                                    android:layout_width="wrap_content"-->
+        <!--                                    android:layout_height="wrap_content"-->
+        <!--                                    android:layout_marginLeft="@dimen/fugu_margin_12"-->
+        <!--                                    android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />-->
+        <!--                        </LinearLayout>-->
+
+        <!--                        <androidx.appcompat.widget.AppCompatImageView-->
+        <!--                                android:id="@+id/ivReplyCall"-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:src="@drawable/ic_message" />-->
+
+        <!--                    </LinearLayout>-->
+        <!--                </RelativeLayout>-->
+
+        <!--                <RelativeLayout-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_alignParentBottom="true"-->
+        <!--                        android:layout_marginBottom="@dimen/fugu_margin_20">-->
+
+        <!--                    <androidx.appcompat.widget.AppCompatTextView-->
+        <!--                            android:id="@+id/tvReject"-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:layout_alignParentStart="true"-->
+        <!--                            android:layout_marginStart="@dimen/fugu_margin_20"-->
+        <!--                            android:text="Swipe up to reject"-->
+        <!--                            android:textColor="@color/hippo_white"-->
+        <!--                            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"-->
+        <!--                            android:textSize="12sp"-->
+        <!--                            android:visibility="invisible" />-->
+
+        <!--                    <androidx.appcompat.widget.AppCompatTextView-->
+        <!--                            android:id="@+id/tvAnswer"-->
+        <!--                            android:text="Swipe up to accept"-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:layout_alignParentEnd="true"-->
+        <!--                            android:layout_marginEnd="@dimen/fugu_margin_20"-->
+        <!--                            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"-->
+        <!--                            android:textColor="@color/hippo_white"-->
+        <!--                            android:textSize="12sp" />-->
+
+        <!--                    <androidx.appcompat.widget.AppCompatTextView-->
+        <!--                            android:id="@+id/tvReply"-->
+        <!--                            android:text="Swipe up to reply"-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:layout_alignParentEnd="true"-->
+        <!--                            android:layout_marginEnd="@dimen/fugu_margin_20"-->
+        <!--                            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"-->
+        <!--                            android:textColor="@color/hippo_white"-->
+        <!--                            android:textSize="12sp"-->
+        <!--                            android:visibility="gone" />-->
+        <!--                </RelativeLayout>-->
+        <!--            </RelativeLayout>-->
+
+        <!--        </LinearLayout>-->
+        <!--    </RelativeLayout>-->
+        <!--</LinearLayout>-->

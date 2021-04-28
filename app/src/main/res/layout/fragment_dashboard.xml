@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:id="@+id/customer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fugu_padding_6"
+                    android:paddingRight="@dimen/fugu_padding_6"
+                    android:layout_marginTop="@dimen/fugu_margin_10"
+                    android:visibility="visible"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:text="Online Status"
+                        android:textColor="#FFF"
+                        android:background="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <EditText
+                        android:id="@+id/editTextJoin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:hint="session transaction ID"
+                        android:minHeight="40dp"
+                        android:layout_marginTop="16dp"/>
+
+
+                <Button
+                        android:id="@+id/btnJoin"
+                        android:text="Join Session"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+
+                <EditText
+                        android:id="@+id/editTextTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:hint="set time/lang"
+                        android:minHeight="40dp"
+                        android:layout_marginTop="16dp"/>
+
+
+                <Button
+                        android:id="@+id/btnSetLang"
+                        android:text="Set Lang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+
+
+
+                <Button
+                        android:id="@+id/set_time"
+                        android:text="Set Time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <Button
+                        android:id="@+id/stop_time"
+                        android:text="Stop Time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <View android:layout_width="match_parent" android:layout_height="3dp"
+                      android:background="@color/colorPrimary"/>
+
+
+                <TextView
+                        android:text="Create chat"
+                        android:textColor="#FFF"
+                        android:background="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <EditText
+                        android:id="@+id/et_transaction_id"
+                        android:hint="Transaction ID/lang"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <EditText
+                        android:id="@+id/et_user_unique_key"
+                        android:hint="currency/user unique key"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <EditText
+                        android:id="@+id/et_channel_name"
+                        android:hint="Amount/channel name"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:digits="1234567890."
+                        android:inputType="number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <EditText
+                        android:id="@+id/et_chat_tags"
+                        android:hint="Title/tags"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <EditText
+                        android:id="@+id/et_gateways"
+                        android:hint="Gateway ID"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:inputType="number"
+                        android:digits="1234567890"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <Button
+                        android:id="@+id/btnCreateChat"
+                        android:text="Create Chat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <Button
+                        android:id="@+id/btnPrePayment"
+                        android:text="Pre payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <Button
+                        android:id="@+id/btnUnreadCount"
+                        android:text="Unread Count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <View android:layout_width="match_parent"
+                      android:layout_height="3dp"
+                      android:background="@color/colorPrimary"/>
+
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fugu_margin_10"
+                        android:textColor="#FFF"
+                        android:text="Create Call"
+                        android:background="@color/colorPrimary"/>
+
+                <EditText
+                        android:id="@+id/et_call_transaction_id"
+                        android:hint="TransactionId"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <EditText
+                        android:id="@+id/et_call_user_name"
+                        android:hint="Other User Name"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <EditText
+                        android:id="@+id/et_call_user_unique_key"
+                        android:hint="Other User Unique key"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <EditText
+                        android:id="@+id/et_call_image_url"
+                        android:hint="Other User Image Url"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <EditText
+                        android:id="@+id/et_call_email"
+                        android:hint="Agent email"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:inputType="textEmailAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                <Button
+                        android:id="@+id/audio_call"
+                        android:text="Audio call"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <Button
+                        android:id="@+id/video_call"
+                        android:text="Video call"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <View android:layout_width="match_parent" android:layout_height="3dp"
+                      android:background="@color/colorPrimary"/>
+
+
+                <View android:layout_width="match_parent"
+                      android:layout_height="3dp"
+                      android:background="@color/colorPrimary"/>
+
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fugu_margin_10"
+                        android:textColor="#FFF"
+                        android:text="Mobile Campaign"
+                        android:background="@color/colorPrimary"/>
+
+                <Button
+                        android:id="@+id/btnCampaign"
+                        android:text="Inbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/manager"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:text="Create chat"
+                        android:textColor="#FFF"
+                        android:background="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <EditText
+                        android:id="@+id/mg_transaction_id"
+                        android:hint="Transaction ID"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <EditText
+                        android:id="@+id/mg_user_unique_key"
+                        android:hint="Other User Unique key"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <Button
+                        android:id="@+id/btnMgCreateChat"
+                        android:text="Create Chat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <EditText
+                        android:id="@+id/mg_user_agent"
+                        android:hint="Email"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <Button
+                        android:id="@+id/btnMgCountChat"
+                        android:text="Unread Count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
